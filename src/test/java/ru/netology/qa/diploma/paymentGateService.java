@@ -30,9 +30,9 @@ public class paymentGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Ivan Petrov");
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -45,9 +45,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -72,9 +72,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -99,9 +99,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -211,9 +211,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -420,7 +420,7 @@ public class paymentGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Ivan Petrov");
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
-        $(".input__sub").shouldHave(text("Неверно указан срок действия карты"));
+        $(".input__sub").shouldHave(text("Истёк срок действия карты"));
     }
 
     @Test
@@ -469,9 +469,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -484,9 +484,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -559,9 +559,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("6243");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -586,9 +586,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("1234567890");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
@@ -613,9 +613,9 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("4 62");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
+        Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Configuration.timeout = 15000;
     }
 
     @Test
