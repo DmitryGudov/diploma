@@ -44,7 +44,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -71,7 +70,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -98,7 +96,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -149,7 +146,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".input__sub").shouldHave(text("Поле обязательно для заполнения"));
     }
 
@@ -210,7 +206,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -261,7 +256,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".input__sub").shouldHave(text("Поле обязательно для заполнения"));
     }
 
@@ -346,7 +340,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".input__sub").shouldHave(text("Истёк срок действия карты"));
     }
 
@@ -395,7 +388,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".input__sub").shouldHave(text("Поле обязательно для заполнения"));
     }
 
@@ -468,7 +460,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("RODION AVDEEV");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -483,7 +474,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("rodion avdeev");
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -558,7 +548,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("6243");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -585,7 +574,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("1234567890");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -612,7 +600,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("4 62");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         Configuration.timeout = 10000;
         $(".notification__title").shouldHave(text("Ошибка"));
         $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
@@ -663,7 +650,6 @@ public class creditGateService {
         $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
         $(by("placeholder", "999")).sendKeys("   ");
         $$("button").find(exactText("Продолжить")).click();
-        //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".input__sub").shouldHave(text("Поле обязательно для заполнения"));
     }
 }
