@@ -3,7 +3,7 @@ package ru.netology.qa.diploma;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.Duration;
+import com.codeborne.selenide.Configuration;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
@@ -32,7 +32,7 @@ public class creditGateService {
         $$("button").find(exactText("Продолжить")).click();
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -45,9 +45,9 @@ public class creditGateService {
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
-        $(".notification__title").shouldHave(text("Успешно"));
-        $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        $(".notification__title").shouldHave(text("Ошибка"));
+        $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -72,9 +72,9 @@ public class creditGateService {
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 16 вводимых символов. Ввести больше не получится.
-        $(".notification__title").shouldHave(text("Успешно"));
-        $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        $(".notification__title").shouldHave(text("Ошибка"));
+        $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -101,7 +101,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -213,7 +213,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -471,7 +471,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -486,7 +486,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая преобразует регистр текста в нужный.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -561,7 +561,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -588,7 +588,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая пропустит только первые 3 вводимых символа. Ввести больше не получится.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
@@ -615,7 +615,7 @@ public class creditGateService {
         //Примечание: считается, что в поле настроена "маска", которая игнорирует любое количество введенных пробелов. Поле заполняется только числовыми символами.
         $(".notification__title").shouldHave(text("Успешно"));
         $(".notification__content").shouldHave(text("Операция одобрена Банком."));
-        Duration.ofSeconds(30);
+        Configuration.timeout = 30000;
     }
 
     @Test
