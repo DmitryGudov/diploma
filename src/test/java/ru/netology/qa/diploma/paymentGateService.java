@@ -284,7 +284,7 @@ public class paymentGateService {
     }
 
     @Test
-    void case24() {
+    void case24_1() {
         $$("button").find(exactText("Купить")).click();
         $(by("placeholder", "0000 0000 0000 0000")).sendKeys("4444444444444441");
         $(by("placeholder", "08")).sendKeys("02");
@@ -293,6 +293,20 @@ public class paymentGateService {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         $(".input__sub").shouldHave(text("Неверно указан срок действия карты"));
+    }
+
+    @Test
+    void case24_2() {
+        $$("button").find(exactText("Купить")).click();
+        $(by("placeholder", "0000 0000 0000 0000")).sendKeys("4444444444444441");
+        $(by("placeholder", "08")).sendKeys("02");
+        $(by("placeholder", "22")).sendKeys("29");
+        $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Ivan Petrov");
+        $(by("placeholder", "999")).sendKeys("441");
+        $$("button").find(exactText("Продолжить")).click();
+        Configuration.timeout = 10000;
+        $(".notification__title").shouldHave(text("Успешно"));
+        $(".notification__content").shouldHave(text("Операция одобрена Банком."));
     }
 
     @Test

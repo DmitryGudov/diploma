@@ -284,7 +284,7 @@ public class creditGateService {
     }
 
     @Test
-    void case75() {
+    void case75_1() {
         $$("button").find(exactText("Купить в кредит")).click();
         $(by("placeholder", "0000 0000 0000 0000")).sendKeys("4444444444444442");
         $(by("placeholder", "08")).sendKeys("11");
@@ -293,6 +293,20 @@ public class creditGateService {
         $(by("placeholder", "999")).sendKeys("627");
         $$("button").find(exactText("Продолжить")).click();
         $(".input__sub").shouldHave(text("Неверно указан срок действия карты"));
+    }
+
+    @Test
+    void case75_2() {
+        $$("button").find(exactText("Купить в кредит")).click();
+        $(by("placeholder", "0000 0000 0000 0000")).sendKeys("4444444444444442");
+        $(by("placeholder", "08")).sendKeys("11");
+        $(by("placeholder", "22")).sendKeys("29");
+        $$(".input__inner").findBy(text("Владелец")).$(".input__control").setValue("Roman Kozlov");
+        $(by("placeholder", "999")).sendKeys("627");
+        $$("button").find(exactText("Продолжить")).click();
+        Configuration.timeout = 10000;
+        $(".notification__title").shouldHave(text("Ошибка"));
+        $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
     }
 
     @Test
