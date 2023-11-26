@@ -6,9 +6,9 @@
 ## Тест-кейсы
 Общее количество автоматизированных сценариев: `106`, <br>
 из которых: <br>
-`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java) для сервиса платежей `Payment Gate` <br>
+`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java) для сервиса платежей `Payment Gate` <br>
 и <br>
-`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java) для сервиса платежей `Credit Gate`. <br>
+`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java) для сервиса платежей `Credit Gate`. <br>
 ## Результаты выполнения автотестов:
 ![Снимок экрана от 2023-11-26 22-53-42](https://github.com/DmitryGudov/diploma/assets/124876096/ec85f82f-02f1-4931-b36e-c6f30f8af4ed)
 ![Test-results-Test-Summary](https://github.com/DmitryGudov/diploma/assets/124876096/d682e84d-fd08-4993-8cf8-a19878018981)
