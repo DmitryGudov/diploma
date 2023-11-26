@@ -10,10 +10,10 @@
 и <br>
 `53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java) для сервиса платежей `Credit Gate`. <br>
 ## Результаты выполнения автотестов:
-![Снимок экрана от 2023-11-26 22-53-42.png](..%2F..%2F%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F%2F%D0%A1%D0%BD%D0%B8%D0%BC%D0%BA%D0%B8%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%2F%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202023-11-26%2022-53-42.png)
-![Test-results-Test-Summary.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-Test-Summary.png)
-![Test-results-paymentGateTest.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-paymentGateTest.png)
-![Test-results-creditGateTest.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-creditGateTest.png)
+![Снимок экрана от 2023-11-26 22-53-42](https://github.com/DmitryGudov/diploma/assets/124876096/ec85f82f-02f1-4931-b36e-c6f30f8af4ed)
+![Test-results-Test-Summary](https://github.com/DmitryGudov/diploma/assets/124876096/d682e84d-fd08-4993-8cf8-a19878018981)
+![Test-results-paymentGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/73e2e6ed-9ea6-48a2-ab0e-4bccf60613fd)
+![Test-results-creditGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/a17fb009-176c-4b8f-9b86-d48be9d9a258)
 ## Общие рекомендации
 - Разработать документацию с описанием постановок задач к функционалу приложения.
 - Исправить имеющиеся в приложении дефекты.
