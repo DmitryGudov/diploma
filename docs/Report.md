@@ -1,4 +1,3 @@
-# Отчётные документы по итогам тестирования
 ## Краткое описание
 В соответствии с [планом тестирования](https://github.com/DmitryGudov/diploma/blob/main/docs/Plan.md) 
 было произведено автоматизированное тестирование веб-сервиса "[Путешествие дня](http://localhost:8080/)".  
@@ -11,9 +10,9 @@
 `53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java) для сервиса платежей `Credit Gate`. <br>
 ## Результаты выполнения автотестов:
 ![Снимок экрана от 2023-11-26 22-53-42](https://github.com/DmitryGudov/diploma/assets/124876096/ec85f82f-02f1-4931-b36e-c6f30f8af4ed)
-![Test-results-Test-Summary](https://github.com/DmitryGudov/diploma/assets/124876096/d682e84d-fd08-4993-8cf8-a19878018981)
-![Test-results-paymentGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/73e2e6ed-9ea6-48a2-ab0e-4bccf60613fd)
-![Test-results-creditGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/a17fb009-176c-4b8f-9b86-d48be9d9a258)
+![285680935-d682e84d-fd08-4993-8cf8-a19878018981](https://github.com/DmitryGudov/diploma/assets/124876096/664580bc-623e-4896-ad59-bdcd39808ca1)
+![285680946-73e2e6ed-9ea6-48a2-ab0e-4bccf60613fd](https://github.com/DmitryGudov/diploma/assets/124876096/544531e5-c324-45ee-a80a-a269919e7b68)
+![285680948-a17fb009-176c-4b8f-9b86-d48be9d9a258](https://github.com/DmitryGudov/diploma/assets/124876096/5e6c6c51-d3e5-4d38-805d-25d7cfd0f40f)
 ## Общие рекомендации
 - Разработать документацию с описанием постановок задач к функционалу приложения.
 - Исправить имеющиеся в приложении дефекты.
