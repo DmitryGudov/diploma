@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class paymentGateService {
+public class paymentGateTest {
 
     @BeforeEach
     public void setUp() {

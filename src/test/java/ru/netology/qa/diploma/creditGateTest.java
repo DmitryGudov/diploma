@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class creditGateService {
+public class creditGateTest {
 
     @BeforeEach
     public void setUp() {
