@@ -8,12 +8,14 @@ services:
 
 before_build:
   - docker-compose -f docker-compose.yml up -d
-  - chmod +x gradlew
   - sleep 20  # Подождем, чтобы сервисы успели запуститься
 
-build_script:
-  - java -jar ./artifacts/aqa-shop.jar
+install:
+  - java -jar -Dserver.port=8080 ./artifacts/aqa-shop.jar
+  - chmod +x gradlew
   - sleep 20  # Подождем, чтобы сервис успел запуститься
+
+build_script:
   - ./gradlew test --info -Dselenide.headless=true
 
 after_build:
