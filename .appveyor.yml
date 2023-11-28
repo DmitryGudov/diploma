@@ -8,11 +8,13 @@ services:
 
 before_build:
   - docker-compose -f docker-compose.yml up -d
+  - chmod +x gradlew
+  - sleep 20  # Подождем, чтобы сервисы успели запуститься
 
 build_script:
-  - sleep 20  # Подождем, чтобы сервисы успели запуститься
   - java -jar ./artifacts/aqa-shop.jar
-  - ./gradlew test
+  - sleep 20  # Подождем, чтобы сервис успел запуститься
+  - ./gradlew test --info -Dselenide.headless=true
 
 after_build:
-  - docker-compose -f path/to/your/docker-compose.yml down
+  - docker-compose -f docker-compose.yml down
