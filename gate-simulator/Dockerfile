@@ -1,6 +1,20 @@
-FROM node:8.16.2-alpine
-WORKDIR /opt/app
-COPY . .
+# Используем официальный образ Node.js
+FROM node:14
+
+# Устанавливаем рабочую директорию в контейнере
+WORKDIR /app
+
+# Копируем package.json и package-lock.json в контейнер
+COPY package*.json ./
+
+# Устанавливаем зависимости
 RUN npm install
-CMD ["npm", "start"]
+
+# Копируем остальные файлы в контейнер
+COPY . .
+
+# Определяем порт, который будет слушаться внутри контейнера
 EXPOSE 9999
+
+# Команда для запуска приложения при старте контейнера
+CMD ["npm", "start"]

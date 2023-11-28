@@ -1,0 +1,18 @@
+version: 1.0
+
+image:
+  - ubuntu1804
+
+services:
+  - docker
+
+before_build:
+  - docker-compose -f docker-compose.yml up -d
+
+build_script:
+  - sleep 20  # Подождем, чтобы сервисы успели запуститься
+  - java -jar ./artifacts/aqa-shop.jar
+  - ./gradlew test
+
+after_build:
+  - docker-compose -f path/to/your/docker-compose.yml down
