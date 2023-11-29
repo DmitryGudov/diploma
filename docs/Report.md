@@ -17,10 +17,10 @@
 
 ## Результаты выполнения автотестов:
 
-![Снимок экрана от 2023-11-26 22-53-42](https://github.com/DmitryGudov/diploma/assets/124876096/ec85f82f-02f1-4931-b36e-c6f30f8af4ed)
-![285680935-d682e84d-fd08-4993-8cf8-a19878018981](https://github.com/DmitryGudov/diploma/assets/124876096/664580bc-623e-4896-ad59-bdcd39808ca1)
-![285680946-73e2e6ed-9ea6-48a2-ab0e-4bccf60613fd](https://github.com/DmitryGudov/diploma/assets/124876096/544531e5-c324-45ee-a80a-a269919e7b68)
-![285680948-a17fb009-176c-4b8f-9b86-d48be9d9a258](https://github.com/DmitryGudov/diploma/assets/124876096/5e6c6c51-d3e5-4d38-805d-25d7cfd0f40f)
+![Test-results-Test-Summary](https://github.com/DmitryGudov/diploma/assets/124876096/dfdd3b1e-4331-48f1-a5ef-bbf491ae2151)
+![Test-results-Test-Summary (1)](https://github.com/DmitryGudov/diploma/assets/124876096/7b1a0ce4-3440-4d1d-954b-dd76d8b3a6f8)
+![Test-results-paymentGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/5101226b-99ef-475a-9577-e5188a4d343b)
+![Test-results-creditGateTest](https://github.com/DmitryGudov/diploma/assets/124876096/a0a8cc42-1327-42dc-b64e-0d0e044b48f2)
 
 ## Логи `упавших` тестов
 
