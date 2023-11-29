@@ -97,8 +97,8 @@ public class paymentGateTest {
         $(by("placeholder", "999")).sendKeys("441");
         $$("button").find(exactText("Продолжить")).click();
         Configuration.timeout = 10000;
-        $(".notification__title").shouldHave(text("Успешно"));
-        $(".notification__content").shouldHave(text("Операция одобрена Банком."));
+        $(".notification__title").shouldHave(text("Ошибка"));
+        $(".notification__content").shouldHave(text("Ошибка! Банк отказал в проведении операции."));
     }
 
     @Test
