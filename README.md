@@ -1,6 +1,6 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/7opm1bydbjfuc3gk/branch/main?svg=true)](https://ci.appveyor.com/project/DmitryGudov/diploma/branch/main) –
+[![Build status](https://ci.appveyor.com/api/projects/status/hmec318qpsa7w60k/branch/main?svg=true)](https://ci.appveyor.com/project/DmitryGudov/diploma/branch/main) –
 бейджик для ветки `main` <br>
-[![Build status](https://ci.appveyor.com/api/projects/status/6f1wme1qercvh1m8/branch/master?svg=true)](https://ci.appveyor.com/project/DmitryGudov/diploma-j8krw/branch/master) –
+[![Build status](https://ci.appveyor.com/api/projects/status/nf0jra9icl093je2/branch/master?svg=true)](https://ci.appveyor.com/project/DmitryGudov/diploma-6j9lw/branch/master) –
 бейджик для ветки `master`
 
 # Перечень документации
