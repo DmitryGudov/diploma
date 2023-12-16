@@ -11,18 +11,18 @@
 
 Общее количество автоматизированных сценариев: `107`, <br>
 из которых: <br>
-`54` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java)
+`54` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/test/PaymentGateTest.java)
 для сервиса платежей `Payment Gate` <br>
 и <br>
-`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java)
+`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/test/CreditGateTest.java)
 для сервиса платежей `Credit Gate`. <br>
 
 ## Результаты выполнения автотестов:
 
-![Test-results-Package-ru-netology-qa-diploma-test.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-Package-ru-netology-qa-diploma-test.png)
-![Test-results-Test-Summary.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-Test-Summary.png)
-![Test-results-Payment-Gate-Tests.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-Payment-Gate-Tests.png)
-![Test-results-Credit-Gate-Tests.png](..%2F..%2F%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B8%2FTest-results-Credit-Gate-Tests.png)
+![Test-results-Package-ru-netology-qa-diploma-test](https://github.com/DmitryGudov/diploma/assets/124876096/ecb57d55-0c0a-4ccf-b236-0de205a199ef)
+![Test-results-Test-Summary](https://github.com/DmitryGudov/diploma/assets/124876096/bdc9592e-1b8d-4929-aae5-91419606613c)
+![Test-results-Payment-Gate-Tests](https://github.com/DmitryGudov/diploma/assets/124876096/0008e25f-4988-4266-b74f-fee920246bbd)
+![Test-results-Credit-Gate-Tests](https://github.com/DmitryGudov/diploma/assets/124876096/65cca3ef-8509-4222-8321-150df718cccb)
 
 > **Примечание**: количество успешных и неуспешных тестов может изменяться при каждом последующем тестовом прогоне. Это
 > связано с
@@ -32,7 +32,7 @@
 ## Логи `упавших` тестов
 
 <details>
-<summary style="font-size: 20px"><b><a href="https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java">paymentGateTest</a></b></summary>
+<summary style="font-size: 20px"><b><a href="https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/test/PaymentGateTest.java">paymentGateTest</a></b></summary>
 
 <details>
 <summary style="font-size: 16px">1. Should be amount pay is 45_000</summary>
@@ -3060,7 +3060,7 @@ Driver info: driver.version: unknown
 </details>
 
 <details>
-<summary style="font-size: 20px"><b><a href="https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java">creditGateTest</a></b></summary>
+<summary style="font-size: 20px"><b><a href="https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/test/CreditGateTest.java">creditGateTest</a></b></summary>
 
 <details>
 <summary style="font-size: 16px">1. Should be displayed the card declined status in the database</summary>
