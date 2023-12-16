@@ -1,11 +1,14 @@
 package ru.netology.qa.diploma.test;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.netology.qa.diploma.page.PaymentGatePage;
+
 import ru.netology.qa.diploma.page.HomePage;
+import ru.netology.qa.diploma.page.PaymentGatePage;
 import ru.netology.qa.diploma.data.DataHelper;
+import ru.netology.qa.diploma.data.SQLHelper;
 
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,6 +20,7 @@ public class PaymentGateTest {
     private HomePage homePage = new HomePage();
 
     String approvedCardNumber = DataHelper.getCardApproved().getCardNumber();
+    String approvedCardStatus = DataHelper.getCardApproved().getCardStatus();
     String randomCardNumber17Digits = DataHelper.getRandomCardNumber17Digits();
     String randomCardNumber15Digits = DataHelper.getRandomCardNumber15Digits();
     String randomCardNumber40Digits = DataHelper.getRandomCardNumber40Digits();
@@ -61,6 +65,11 @@ public class PaymentGateTest {
         homePage.homePage();
         homePage.payment();
         paymentGatePage.paymentGatePage();
+    }
+
+    @AfterAll
+    public static void shouldCleanBase() {
+        SQLHelper.cleanBase();
     }
 
     @Test
@@ -485,6 +494,26 @@ public class PaymentGateTest {
         paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, validOwner, threeSpaces);
         paymentGatePage.clickContinueButton();
         assertEquals("Поле обязательно для заполнения", paymentGatePage.getEmptyFieldText());
+    }
+
+    @Test
+    @DisplayName("Should be displayed the card approved status in the database")
+    void shouldBeDisplayedTheCardApprovedStatusInTheDatabase() {
+        paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, validOwner, random3Digits);
+        paymentGatePage.clickContinueButton();
+        paymentGatePage.getBankApprovedOperationTitleText();
+        paymentGatePage.getBankApprovedOperationContentText();
+        assertEquals(approvedCardStatus, SQLHelper.getCardStatus("payment_entity"));
+    }
+
+    @Test
+    @DisplayName("Should be amount pay is 45_000")
+    void shouldBeAmountPayIs45_000() {
+        paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, validOwner, random3Digits);
+        paymentGatePage.clickContinueButton();
+        paymentGatePage.getBankApprovedOperationTitleText();
+        paymentGatePage.getBankApprovedOperationContentText();
+        assertEquals(45_000, SQLHelper.getAmountPay());
     }
 
 }

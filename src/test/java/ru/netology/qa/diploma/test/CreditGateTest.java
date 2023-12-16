@@ -1,11 +1,14 @@
 package ru.netology.qa.diploma.test;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.netology.qa.diploma.data.DataHelper;
-import ru.netology.qa.diploma.page.CreditGatePage;
+
 import ru.netology.qa.diploma.page.HomePage;
+import ru.netology.qa.diploma.page.CreditGatePage;
+import ru.netology.qa.diploma.data.DataHelper;
+import ru.netology.qa.diploma.data.SQLHelper;
 
 import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +27,13 @@ public class CreditGateTest {
         creditGatePage.creditGatePage();
     }
 
+    @AfterAll
+    public static void shouldCleanBase() {
+        SQLHelper.cleanBase();
+    }
+
     String declinedCardNumber = DataHelper.getCardDeclined().getCardNumber();
+    String declinedCardStatus = DataHelper.getCardDeclined().getCardStatus();
     String randomCardNumber17Digits = DataHelper.getRandomCardNumber17Digits();
     String randomCardNumber15Digits = DataHelper.getRandomCardNumber15Digits();
     String randomCardNumber40Digits = DataHelper.getRandomCardNumber40Digits();
@@ -381,24 +390,24 @@ public class CreditGateTest {
     }
 
     @Test
-    @DisplayName("Should be entered 10 spaces in the owner field when making a credit purchase")
-    void shouldBeEntered10SpacesInOwnerFieldWhenMakingCreditPurchase() {
+    @DisplayName("Should be entered 16 spaces in the owner field when making a credit purchase")
+    void shouldBeEntered16SpacesInOwnerFieldWhenMakingCreditPurchase() {
         creditGatePage.fillCardData(declinedCardNumber, validExpiryMonth, validExpiryYear, sixteenSpaces, random3Digits);
         creditGatePage.clickContinueButton();
         assertEquals("Поле обязательно для заполнения", creditGatePage.getEmptyFieldText());
     }
 
     @Test
-    @DisplayName("Should be entered 15 numeric characters in owner field when making a credit purchase")
-    void shouldBeEntered15NumericCharactersInOwnerFieldWhenMakingCreditPurchase() {
+    @DisplayName("Should be entered 10 numeric characters in owner field when making a credit purchase")
+    void shouldBeEntered10NumericCharactersInOwnerFieldWhenMakingCreditPurchase() {
         creditGatePage.fillCardData(declinedCardNumber, validExpiryMonth, validExpiryYear, random10Digits, random3Digits);
         creditGatePage.clickContinueButton();
         assertEquals("Неверный формат", creditGatePage.getErrorFormatText());
     }
 
     @Test
-    @DisplayName("Should be entered 12 special characters in owner field when making a credit purchase")
-    void shouldBeEntered12SpecialCharactersInOwnerFieldWhenMakingCreditPurchase() {
+    @DisplayName("Should be entered 16 special characters in owner field when making a credit purchase")
+    void shouldBeEntered16SpecialCharactersInOwnerFieldWhenMakingCreditPurchase() {
         creditGatePage.fillCardData(declinedCardNumber, validExpiryMonth, validExpiryYear, random16SpecialCharacters, random3Digits);
         creditGatePage.clickContinueButton();
         assertEquals("Неверный формат", creditGatePage.getErrorFormatText());
@@ -485,6 +494,16 @@ public class CreditGateTest {
         creditGatePage.fillCardData(declinedCardNumber, validExpiryMonth, validExpiryYear, validOwner, threeSpaces);
         creditGatePage.clickContinueButton();
         assertEquals("Поле обязательно для заполнения", creditGatePage.getEmptyFieldText());
+    }
+
+    @Test
+    @DisplayName("Should be displayed the card declined status in the database")
+    void shouldBeDisplayedTheCardDeclinedStatusInTheDatabase() {
+        creditGatePage.fillCardData(declinedCardNumber, validExpiryMonth, validExpiryYear, validOwner, random3Digits);
+        creditGatePage.clickContinueButton();
+        creditGatePage.getBankDeclinedOperationTitleText();
+        creditGatePage.getBankDeclinedOperationContentText();
+        assertEquals(creditGatePage, SQLHelper.getCardStatus("credit_request_entity"));
     }
 
 }

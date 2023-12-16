@@ -49,8 +49,8 @@ public class DataHelper {
     public static String getValidExpiryYear() {
         int currentYear = YearMonth.now().getYear();
         int year = faker.number().numberBetween(currentYear, currentYear + 10);
-        year = Math.max(year, currentYear);
-        return String.format("%02d", year % 100);
+        int validYear = Math.min(year, currentYear + 10);
+        return String.format("%02d", validYear % 100);
     }
 
     public static String getValidOwner() {

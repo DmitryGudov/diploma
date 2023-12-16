@@ -9,9 +9,9 @@
 
 ## Тест-кейсы
 
-Общее количество автоматизированных сценариев: `106`, <br>
+Общее количество автоматизированных сценариев: `107`, <br>
 из которых: <br>
-`53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java)
+`54` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/paymentGateTest.java)
 для сервиса платежей `Payment Gate` <br>
 и <br>
 `53` [сценария](https://github.com/DmitryGudov/diploma/blob/main/src/test/java/ru/netology/qa/diploma/creditGateTest.java)
