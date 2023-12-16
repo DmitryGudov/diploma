@@ -390,24 +390,24 @@ public class PaymentGateTest {
     }
 
     @Test
-    @DisplayName("Should be entered 10 spaces in owner field when making card payment")
-    void shouldBeEntered10SpacesInOwnerFieldWhenMakingCardPayment() {
+    @DisplayName("Should be entered 16 spaces in owner field when making card payment")
+    void shouldBeEntered16SpacesInOwnerFieldWhenMakingCardPayment() {
         paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, sixteenSpaces, random3Digits);
         paymentGatePage.clickContinueButton();
         assertEquals("Поле обязательно для заполнения", paymentGatePage.getEmptyFieldText());
     }
 
     @Test
-    @DisplayName("Should be entered 15 numeric characters in owner field when making card payment")
-    void shouldBeEntered15NumericCharactersInOwnerFieldWhenMakingCardPayment() {
+    @DisplayName("Should be entered 10 numeric characters in owner field when making card payment")
+    void shouldBeEntered10NumericCharactersInOwnerFieldWhenMakingCardPayment() {
         paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, random10Digits, random3Digits);
         paymentGatePage.clickContinueButton();
         assertEquals("Неверный формат", paymentGatePage.getErrorFormatText());
     }
 
     @Test
-    @DisplayName("Should be entered 12 special characters in owner field when making card payment")
-    void shouldBeEntered12SpecialCharactersInOwnerFieldWhenMakingCardPayment() {
+    @DisplayName("Should be entered 16 special characters in owner field when making card payment")
+    void shouldBeEntered16SpecialCharactersInOwnerFieldWhenMakingCardPayment() {
         paymentGatePage.fillCardData(approvedCardNumber, validExpiryMonth, validExpiryYear, random16SpecialCharacters, random3Digits);
         paymentGatePage.clickContinueButton();
         assertEquals("Неверный формат", paymentGatePage.getErrorFormatText());
