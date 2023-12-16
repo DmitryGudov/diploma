@@ -8,9 +8,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class SQLHelper {
-    private static final String url = "jdbc:postgresql://localhost:5432/app";
-    private static final String user = "app";
-    private static final String pass = "pass";
+    private static final String url = System.getProperty("db.url");
+    private static final String user = System.getProperty("db.user");
+    private static final String pass = System.getProperty("db.password");
     private static QueryRunner runner = new QueryRunner();
 
     private SQLHelper() {
@@ -44,4 +44,5 @@ public class SQLHelper {
         runner.execute(connection, "DELETE FROM order_entity");
         runner.execute(connection, "DELETE FROM payment_entity");
     }
+
 }
