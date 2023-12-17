@@ -2,7 +2,8 @@
 [![Build and Test](https://github.com/DmitryGudov/diploma/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/DmitryGudov/diploma/actions/workflows/gradle.yml)
 – бейджики для ветки `main` <br>
 [![Build status](https://ci.appveyor.com/api/projects/status/ov6y9t2tv132e7j2/branch/master?svg=true)](https://ci.appveyor.com/project/DmitryGudov/diploma-too00/branch/master)
-бейджик для ветки `master`
+[![Build and Test](https://github.com/DmitryGudov/diploma/actions/workflows/gradle.yml/badge.svg)](https://github.com/DmitryGudov/diploma/actions/workflows/gradle.yml)
+– бейджики для ветки `master`
 
 # Перечень документации
 
