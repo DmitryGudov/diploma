@@ -20,7 +20,8 @@
 
 ## Примечание
 
-Содержимое веток одинаково, есть только одно отличие в файле `application.properties`.
+Содержимое веток одинаково, имеются лишь небольшие отличия в файлах `application.properties`, `build.gradle`
+и `gradle.yml`.
 
 Содержимое файла `application.properties` для ветки `main`, в которой настроена работа `MySQL`:
 
@@ -33,6 +34,29 @@ spring.datasource.username=app
 spring.datasource.password=pass
 ```
 
+Фрагмент содержимого файла `build.gradle` для ветки `main`, в которой настроена работа `MySQL`:
+
+```
+test {
+    useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    systemProperty 'db.url', System.getProperty('db.url', 'jdbc:mysql://localhost:3306/app')
+    //systemProperty 'db.url', System.getProperty('db.url', 'jdbc:postgresql://localhost:5432/app')
+    systemProperty 'db.user', System.getProperty('db.user', 'app')
+    systemProperty 'db.password', System.getProperty('db.password', 'pass')
+    systemProperty 'sut.url', System.getProperty('sut.url', 'http://localhost:8080')
+}
+```
+
+Фрагмент содержимого файла `gradle.yml` для ветки `main`:
+
+```
+on:
+  push:
+    branches:
+      - main
+```
+
 Содержимое файла `application.properties` для ветки `master`, в которой настроена работа `PostgreSQL`:
 
 ```
@@ -42,6 +66,29 @@ spring.payment-gate.url=http://localhost:9999/payment
 spring.datasource.url=jdbc:postgresql://localhost:5432/app
 spring.datasource.username=app
 spring.datasource.password=pass
+```
+
+Фрагмент содержимого файла `build.gradle` для ветки `master`, в которой настроена работа `PostgreSQL`:
+
+```
+test {
+    useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    //systemProperty 'db.url', System.getProperty('db.url', 'jdbc:mysql://localhost:3306/app')
+    systemProperty 'db.url', System.getProperty('db.url', 'jdbc:postgresql://localhost:5432/app')
+    systemProperty 'db.user', System.getProperty('db.user', 'app')
+    systemProperty 'db.password', System.getProperty('db.password', 'pass')
+    systemProperty 'sut.url', System.getProperty('sut.url', 'http://localhost:8080')
+}
+```
+
+Фрагмент содержимого файла `gradle.yml` для ветки `master`:
+
+```
+on:
+  push:
+    branches:
+      - master
 ```
 
 ## Шаг 1
