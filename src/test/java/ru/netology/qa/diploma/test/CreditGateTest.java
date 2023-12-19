@@ -503,7 +503,7 @@ public class CreditGateTest {
         creditGatePage.clickContinueButton();
         creditGatePage.getBankDeclinedOperationTitleText();
         creditGatePage.getBankDeclinedOperationContentText();
-        assertEquals(creditGatePage, SQLHelper.getCardStatus("credit_request_entity"));
+        assertEquals(declinedCardStatus, SQLHelper.getCardStatus("credit_request_entity"));
     }
 
 }
